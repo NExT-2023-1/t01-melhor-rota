@@ -1,5 +1,6 @@
 package Cesar.Rotas.Caminhao.demo.dto;
 
+import Cesar.Rotas.Caminhao.demo.model.Caminhao;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CaminhaoDto {
+public class CaminhaoDTO {
     @NotBlank
     private Boolean status ; 
     @Column(nullable = false, length = 5)
@@ -34,5 +35,15 @@ public class CaminhaoDto {
 	public void setLocation(String location) {
 		this.location = location;
 	}
+
+	public Caminhao toEntity() {
+        return Caminhao.builder()
+                .status(this.status)
+                .location(this.location)
+				.build();
+                
+    }
+
+    
 }   
 
