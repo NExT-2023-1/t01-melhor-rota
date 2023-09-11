@@ -61,4 +61,13 @@ public class CaminhaoService {
 
         return false;
     }
+
+    public String checkLocationCaminhao(long id){
+        Caminhao caminhao = this.caminhaoRepositorio.findById(id).orElse(null);
+        if (caminhao != null) {
+            return caminhao.getLocation();
+        } else {
+            return "Caminhão não encontrado";
+    }
+}
 }
