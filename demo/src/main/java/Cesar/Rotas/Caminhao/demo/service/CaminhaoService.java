@@ -70,10 +70,10 @@ public class CaminhaoService {
             return "Caminhão não encontrado";
     }
 }
-    public String getRoute(long id, @Valid CaminhaoDto caminhaoDTO) {
+    public String getRoute(long id) {
         Caminhao caminhao = this.caminhaoRepositorio.findById(id).orElse(null);
         if (caminhao != null) {
-            return Caminhao.getRoute;
+            return Caminhao.getRoute();
         }
             return null;
 }

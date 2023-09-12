@@ -2,7 +2,7 @@ package Cesar.Rotas.Caminhao.demo.model.grafo;
 
 import java.util.List;
 
-class ResultadoDijkstra {
+public class ResultadoDijkstra {
     private int distanciaMinima;
     private List<Integer> caminho;
  

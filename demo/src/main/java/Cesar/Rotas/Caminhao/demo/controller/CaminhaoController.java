@@ -33,7 +33,7 @@ public class CaminhaoController {
 
     @GetMapping
     public ResponseEntity<List<Caminhao>> ListAll(){
-        List<Caminhao> listCaminhao=this.caminhaoService.ListAll();
+        List<Caminhao> listCaminhao=this.caminhaoService.listAll();
         return new ResponseEntity<>(listCaminhao, HttpStatus.OK);
     }
     public ResponseEntity<Caminhao> create(@RequestBody @Valid CaminhaoDto caminhaoDTO) {
@@ -42,7 +42,7 @@ public class CaminhaoController {
     }
     @PutMapping("{id}")
     public ResponseEntity<Caminhao> Atualizar(@PathVariable long id, @RequestBody @Valid CaminhaoDto caminhaoDto){
-        Caminhao listCaminhao=this.caminhaoService.Update(id,caminhaoDto);
+        Caminhao listCaminhao=this.caminhaoService.update(id,caminhaoDto);
         if(listCaminhao!=null){
             return new ResponseEntity<>(listCaminhao,HttpStatus.OK);
         }else{
@@ -58,5 +58,4 @@ public class CaminhaoController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    //@get para a rota
 }

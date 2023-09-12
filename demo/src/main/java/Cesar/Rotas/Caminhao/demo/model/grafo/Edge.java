@@ -3,7 +3,6 @@ package Cesar.Rotas.Caminhao.demo.model.grafo;
 import java.util.ArrayList;
 import java.util.List;
 
-import Cesar.Rotas.Caminhao.demo.Grafo.Vertice;
 
 public class Edge<edges>  {
  public List<Vertex> vertices;
