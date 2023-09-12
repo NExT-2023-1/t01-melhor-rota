@@ -73,7 +73,7 @@ public class CaminhaoService {
     public String getRoute(long id, @Valid CaminhaoDto caminhaoDTO) {
         Caminhao caminhao = this.caminhaoRepositorio.findById(id).orElse(null);
         if (caminhao != null) {
-            return caminhao.getRoute;
+            return Caminhao.getRoute;
         }
             return null;
 }
