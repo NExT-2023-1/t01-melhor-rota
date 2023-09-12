@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 import Cesar.Rotas.Caminhao.demo.dto.CaminhaoDto;
-import Cesar.Rotas.Caminhao.demo.model.Caminhao;
+import Cesar.Rotas.Caminhao.demo.model.caminhao.Caminhao;
 import Cesar.Rotas.Caminhao.demo.service.CaminhaoService;
 import jakarta.validation.Valid;
 
@@ -58,4 +58,5 @@ public class CaminhaoController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    //@get para a rota
 }

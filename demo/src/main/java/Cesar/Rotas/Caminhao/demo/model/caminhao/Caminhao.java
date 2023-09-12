@@ -1,4 +1,4 @@
-package Cesar.Rotas.Caminhao.demo.model;
+package Cesar.Rotas.Caminhao.demo.model.caminhao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
