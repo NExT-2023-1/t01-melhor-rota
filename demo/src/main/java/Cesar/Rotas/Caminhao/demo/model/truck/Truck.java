@@ -1,4 +1,4 @@
-package Cesar.Rotas.Caminhao.demo.model.caminhao;
+package Cesar.Rotas.Caminhao.demo.model.truck;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Caminhao {
+public class Truck {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,6 +23,7 @@ public class Caminhao {
     private boolean status;//cheio ou vazio
     @Column(nullable = false)
     private String location;
-
+    @Column (nullable = false)
+    private String route;
 
 }
