@@ -14,14 +14,17 @@ public class Grafo {
  
     public Grafo(String filePath) throws IOException {
         String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
-        String[] linhas = content.split("\n");
-        this.V = linhas.length;
+        String[] linhas = content.split("\r\n");
+        this.V = linhas.length-1;
         this.grafo = new int[V][V];
- 
-        for (int i = 0; i < V; i++) {
-            String[] valores = linhas[i].split(" ");
-            for (int j = 0; j < V; j++) {
-                grafo[i][j] = Integer.parseInt(valores[j]);
+
+ //inserir para ler linhas inicialmente
+
+        for (int i = 1; i < V+1; i++) {
+            String[] valores = linhas[i].split(";");
+            for (int j = 0; j < V; j++) 
+            {
+                grafo[i-1][j] = Integer.parseInt(valores[j]);
             }
         }
     }

@@ -12,7 +12,7 @@ import Cesar.Rotas.Caminhao.demo.model.grafo.ResultadoDijkstra;
 public class MainApplication {
 
 	public static void main(String[] args) throws IOException {
-        String filePath = "mapa_mina"; // Substitua com o caminho do seu arquivo de matriz de adjacência
+        String filePath = "C:\\Users\\madxu\\Desktop\\DESAFIO FINAL NEXT\\t01-melhor-rota\\demo\\src\\main\\resources\\mapeamento_mapa_mina.txt";
         Grafo dijkstra = new Grafo(filePath);
 
         int verticeOrigem = 0; // Substitua pelo vértice de origem desejado
@@ -22,7 +22,7 @@ public class MainApplication {
         int distanciaMinima = resultado.getDistanciaMinima();
         List<Integer> caminho = resultado.getCaminho();
 
-        System.out.println("Distância mínima de " + verticeOrigem + " a " + verticeDestino + ": " + distanciaMinima);
+        System.out.println("Distância mínima de " + verticeOrigem + " a " + verticeDestino + ":" + distanciaMinima);
         System.out.println("Caminho: " + caminho);
 
         // Iniciar o aplicativo Spring Boot
