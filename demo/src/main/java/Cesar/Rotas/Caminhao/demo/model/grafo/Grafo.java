@@ -1,6 +1,7 @@
 package Cesar.Rotas.Caminhao.demo.model.grafo;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,17 +12,21 @@ import java.util.List;
 public class Grafo {
     private final int V; // Número de vértices no grafo
     private final int[][] grafo;
- 
+    private static final List<String>vertices=new ArrayList<String>(Arrays.asList("Int1","Int2","Int3","Int4","Int5","Int6","Int7","Int8","Int9","Int10","Int11","Int12","Int13","Desc1","Desc2","Desc3","Esc1","Esc2","Esc3"));
+    
     public Grafo(String filePath) throws IOException {
         String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
-        String[] linhas = content.split("\n");
-        this.V = linhas.length;
+        String[] linhas = content.split("\r\n");
+        this.V = linhas.length-1;
         this.grafo = new int[V][V];
- 
-        for (int i = 0; i < V; i++) {
-            String[] valores = linhas[i].split(" ");
-            for (int j = 0; j < V; j++) {
-                grafo[i][j] = Integer.parseInt(valores[j]);
+
+ //inserir para ler linhas inicialmente
+
+        for (int i = 1; i < V+1; i++) {
+            String[] valores = linhas[i].split(";");
+            for (int j = 0; j < V; j++) 
+            {
+                grafo[i-1][j] = Integer.parseInt(valores[j]);
             }
         }
     }
@@ -40,15 +45,16 @@ public class Grafo {
         return indiceMinimo;
     }
  
-    public ResultadoDijkstra encontrarCaminhoMaisCurto(int verticeOrigem, int verticeDestino) {
+    public ResultadoDijkstra encontrarCaminhoMaisCurto(String verticeOrigem,String verticeDestino) {
         int[] distancias = new int[V];
         boolean[] visitados = new boolean[V];
         int[] predecessores = new int[V];
- 
+        int indexVerticeOrigem=vertices.indexOf(verticeOrigem);
+        int indexVerticeDestino=vertices.indexOf(verticeDestino);
         Arrays.fill(distancias, Integer.MAX_VALUE);
-        distancias[verticeOrigem] = 0;
+        distancias[indexVerticeOrigem] = 0;
  
-        while (!visitados[verticeDestino]) {
+        while (!visitados[indexVerticeDestino]) {
             int u = encontrarMinimaDistancia(distancias, visitados);
             visitados[u] = true;
  
@@ -63,18 +69,18 @@ public class Grafo {
         }
  
         List<Integer> caminho = new ArrayList<>();
-        int atual = verticeDestino;
-        while (atual != verticeOrigem) {
+        int atual = indexVerticeDestino;
+        while (atual != indexVerticeOrigem) {
             caminho.add(atual);
             atual = predecessores[atual];
         }
-        caminho.add(verticeOrigem);
-        List<Integer> caminhoReverso = new ArrayList<>();
+        caminho.add(indexVerticeOrigem);
+        List<String> caminhoReverso = new ArrayList<>();
         for (int i = caminho.size() - 1; i >= 0; i--) {
-            caminhoReverso.add(caminho.get(i));
+            caminhoReverso.add(vertices.get(caminho.get(i)));
         }
  
-        return new ResultadoDijkstra(distancias[verticeDestino], caminhoReverso);
+        return new ResultadoDijkstra(distancias[indexVerticeDestino], caminhoReverso);
     }
 }
 
