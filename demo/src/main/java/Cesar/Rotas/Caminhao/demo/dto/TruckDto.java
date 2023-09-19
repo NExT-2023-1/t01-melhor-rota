@@ -1,5 +1,6 @@
 package Cesar.Rotas.Caminhao.demo.dto;
 
+import Cesar.Rotas.Caminhao.demo.model.truck.Truck;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CaminhaoDto {
+public class TruckDto {
     @NotBlank
     private Boolean status ; 
     @Column(nullable = false, length = 5)
@@ -34,5 +35,16 @@ public class CaminhaoDto {
 	public void setLocation(String location) {
 		this.location = location;
 	}
+	// É comum que a classe CaminhaoDTO tenha um método toEntity() que converte os dados do DTO para
+	//  uma instância da classe Caminhao. Isso é frequentemente usado para realizar a conversão entre 
+	//  objetos DTO (usados para comunicação) e objetos de modelo de domínio (usados para persistência).
+	public Truck toEntity() {
+        return Truck.builder()
+                .status(this.status)
+                .location(this.location)
+				.build();
+                
+    }
+
 }   
 
