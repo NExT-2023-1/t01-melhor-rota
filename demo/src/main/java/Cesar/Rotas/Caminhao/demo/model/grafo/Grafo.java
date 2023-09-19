@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
  
 public class Grafo {
-    private final int V; // Número de vértices no grafo
+    private final int V; 
     private final int[][] grafo;
     private static final List<String>vertices=new ArrayList<String>(Arrays.asList("Int1","Int2","Int3","Int4","Int5","Int6","Int7","Int8","Int9","Int10","Int11","Int12","Int13","Desc1","Desc2","Desc3","Esc1","Esc2","Esc3"));
     
@@ -20,7 +20,7 @@ public class Grafo {
         this.V = linhas.length-1;
         this.grafo = new int[V][V];
 
- //inserir para ler linhas inicialmente
+ 
 
         for (int i = 1; i < V+1; i++) {
             String[] valores = linhas[i].split(";");

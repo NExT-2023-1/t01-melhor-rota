@@ -1,6 +1,8 @@
 package Cesar.Rotas.Caminhao.demo.service;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,7 +27,9 @@ public class TruckService {
         return this.truckRepositorio.save(truck);
 
     }
-
+    public Truck getById(long id) {
+        return this.truckRepositorio.findById(id).orElse(null);
+    }
     public List<Truck> listAll() {
         List<Truck> truck = truckRepositorio.findAll();
         return truck.stream()
@@ -72,7 +76,10 @@ public class TruckService {
             return "Caminhão não encontrado";
     }
 }
-//mudar metodo 
+    /**
+     * @param id
+     * @return
+     */
     public List<String> getRoute(long id) {
         try {
             Grafo dijskstra;
@@ -89,7 +96,11 @@ public class TruckService {
                     rota=resultado.getCaminho();
                 }
             };
-            return rota;
+            String menorValorString = Integer.toString(menorValor);
+            List<String>listaMenorValor=new ArrayList<>();
+            listaMenorValor.add(menorValorString);
+            listaMenorValor.addAll(rota);
+            return listaMenorValor;
         }else{
             for (EnumCarregar verticeDestino : EnumCarregar.values()){
                 ResultadoDijkstra resultado= dijskstra.encontrarCaminhoMaisCurto(verticeOrigem, verticeDestino.toString());
@@ -98,7 +109,13 @@ public class TruckService {
                     rota=resultado.getCaminho();
                 }
             }
-            return rota;
+            String menorValorString = Integer.toString(menorValor);
+            List<String>listaMenorValor=new ArrayList<>();
+            listaMenorValor.add(menorValorString);
+            listaMenorValor.addAll(rota);
+            return listaMenorValor;
+
+  
         }
         } catch (IOException e) {
             e.printStackTrace();
