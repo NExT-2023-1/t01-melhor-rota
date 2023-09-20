@@ -1,7 +1,6 @@
 package Cesar.Rotas.Caminhao.demo.service;
 
 import java.io.IOException;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,10 +36,11 @@ public class TruckService {
     }
 
     public Truck update(long id, @Valid TruckDto truckDTO) {
-        Truck truck = this.truckRepositorio.findById(id).orElse(null);
-        if (truck != null) {
-            Truck updateTruck = truckDTO.toEntity();
-            return this.truckRepositorio.save(updateTruck);
+        Truck updatableTruck = this.truckRepositorio.findById(id).orElse(null);
+        if (updatableTruck != null) {
+            updatableTruck.setLocation(truckDTO.getLocation());
+            updatableTruck.setStatus(truckDTO.getStatus());
+            return this.truckRepositorio.save(updatableTruck);
         }
         return null;
     }
@@ -83,7 +83,7 @@ public class TruckService {
     public List<String> getRoute(long id) {
         try {
             Grafo dijskstra;
-            dijskstra = new Grafo("mapeamento_mapa_mina.txt");
+            dijskstra = new Grafo("demo\\src\\main\\resources\\mapeamento_mapa_mina.txt");
             Truck truck = this.truckRepositorio.findById(id).orElse(null);
         int menorValor = Integer.MAX_VALUE;
         String verticeOrigem=truck.getLocation();

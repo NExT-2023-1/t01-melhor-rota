@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TruckDto {
-    @NotBlank
-    private Boolean status ; 
+    @Column(nullable = false)
+	private Boolean status ; 
     @Column(nullable = false, length = 5)
 	private String location;
 

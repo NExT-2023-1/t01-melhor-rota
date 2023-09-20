@@ -38,7 +38,7 @@ public class TruckController {
         return new ResponseEntity<>(truck, HttpStatus.CREATED);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Truck> Atualizar(@PathVariable long id, @RequestBody @Valid TruckDto truckDto) {
         Truck listTruck = this.truckService.update(id, truckDto);
         if (listTruck != null) {

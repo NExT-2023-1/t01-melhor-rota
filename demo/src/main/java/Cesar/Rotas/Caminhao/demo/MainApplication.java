@@ -12,7 +12,7 @@ import Cesar.Rotas.Caminhao.demo.model.grafo.ResultadoDijkstra;
 public class MainApplication {
 
 	public static void main(String[] args) throws IOException {
-        String filePath = "demo\\src\\main\\resources\\mapeamento_mapa_mina.txt"; // Substitua com o caminho do seu arquivo de matriz de adjacência
+        String filePath = "demo\\src\\main\\resources\\mapeamento_mapa_mina.txt"; 
         Grafo dijkstra = new Grafo(filePath);
 
         String verticeOrigem = "Int1"; // Substitua pelo vértice de origem desejado
