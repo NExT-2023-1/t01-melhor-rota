@@ -1,6 +1,6 @@
 # t01-melhor-rota
 
-<div align="right">
+<div align="center">
 <img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/af11489e-c174-47ec-8a5b-259eb248e0f1" width="200px"> 
 </div>
 
