@@ -8,19 +8,19 @@
 
 RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambientes de minas:
 
-- A API oferece roteamento eficiente com base no status dos caminhões, proporcionando economia de tempo e recursos.
+- A API oferece rota com base na eficiência e na economicidade, de acordo com o status dos caminhões, proporcionando economia de tempo e recursos.
 
 - Os usuários podem cadastrar, buscar, atualizar e excluir informações dos caminhões, incluindo sua localização e status (cheio ou vazio).
 
 - De acorodo com as rotas pré-definidas, conforme a necessidade do cliente, facilitando a busca e o registro de rotas específicas para suas operações logísticas.
 
-- A API é facilmente testada e utilizada, com o Insomnia, uma ferramenta de gerenciamento de APIs.
+- A API é facilmente testada e utilizada com uma ferramenta de gerenciamento de APIs, como por exemplo a API Insomnia.
 
 # Criado por:
 - Igor Menezes
 - Maria Eduarda Vasconcelos
 - [Matheus Lustosa](https://github.com/MatheusLustosa)
-- Mozana Montenegro
+- [Mozana Montenegro](https://github.com/MozanaMMMB)
 - Natani Monte
 
   Mentoria:
