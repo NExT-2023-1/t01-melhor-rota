@@ -19,7 +19,7 @@ RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambient
 # Criado por:
 - Igor Menezes
 - Maria Eduarda Vasconcelos
-- Matheus Lustosa
+- [Matheus Lustosa](https://github.com/MatheusLustosa)
 - Mozana Montenegro
 - Natani Monte
 
