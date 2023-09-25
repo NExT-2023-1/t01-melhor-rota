@@ -8,7 +8,7 @@
 
 
 
-# ROUTE WISE - API
+## 🚚 ROUTE WISE - API
 
 RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambientes de minas:
 
@@ -32,12 +32,12 @@ RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambient
 
   
 Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
-# UML
+## 📝 UML
 <div align="center">
 <img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/042db0fb-9587-4b7d-b4c0-545384d8e540" width="1000px"> 
 </div>
 
-# Como rodar na sua máquina?
+## ⚙️ Como rodar na sua máquina?
 - OpenJDK 17.0.2+;
 - Maven 4.0+;
 - IDE de sua preferência;
@@ -45,7 +45,7 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 - Spring Boot 3.1.3; 
 - MySQL;
 <strong>OBS:</strong> Para rodar a aplicação, será necessário ir em Aplication Properties e atualizar os dados de username e senha, considerando seu banco de dados local.
-## Tecnologias Utilizadas
+## 💻Tecnologias Utilizadas
 
 ![image](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
