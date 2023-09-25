@@ -4,9 +4,9 @@ import java.util.List;
 
 public class ResultadoDijkstra {
     private int distanciaMinima;
-    private List<Integer> caminho;
+    private List<String> caminho;
  
-    public ResultadoDijkstra(int distanciaMinima, List<Integer> caminho) {
+    public ResultadoDijkstra(int distanciaMinima, List<String> caminho) {
         this.distanciaMinima = distanciaMinima;
         this.caminho = caminho;
     }
@@ -15,7 +15,7 @@ public class ResultadoDijkstra {
         return distanciaMinima;
     }
  
-    public List<Integer> getCaminho() {
+    public List<String> getCaminho() {
         return caminho;
     }
 }

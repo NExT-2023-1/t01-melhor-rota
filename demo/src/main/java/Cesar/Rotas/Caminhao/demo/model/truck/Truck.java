@@ -23,7 +23,6 @@ public class Truck {
     private boolean status;//cheio ou vazio
     @Column(nullable = false)
     private String location;
-    @Column (nullable = false)
-    private String route;
+    
 
 }

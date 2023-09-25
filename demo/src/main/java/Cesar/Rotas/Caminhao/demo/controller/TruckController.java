@@ -20,7 +20,6 @@ import Cesar.Rotas.Caminhao.demo.model.truck.Truck;
 import Cesar.Rotas.Caminhao.demo.service.TruckService;
 import jakarta.validation.Valid;
 
-
 @RestController
 @RequestMapping("/truck")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
@@ -28,32 +27,43 @@ public class TruckController {
     private final TruckService truckService;
 
     @GetMapping
-    public ResponseEntity<List<Truck>> ListAll(){
-        List<Truck> listTruck=this.truckService.listAll();
+    public ResponseEntity<List<Truck>> ListAll() {
+        List<Truck> listTruck = this.truckService.listAll();
         return new ResponseEntity<>(listTruck, HttpStatus.OK);
     }
-    
+
     @PostMapping
     public ResponseEntity<Truck> create(@RequestBody @Valid TruckDto truckDTO) {
         Truck truck = truckService.create(truckDTO);
         return new ResponseEntity<>(truck, HttpStatus.CREATED);
     }
-    @PutMapping("{id}")
-    public ResponseEntity<Truck> Atualizar(@PathVariable long id, @RequestBody @Valid TruckDto truckDto){
-        Truck listTruck=this.truckService.update(id,truckDto);
-        if(listTruck!=null){
-            return new ResponseEntity<>(listTruck,HttpStatus.OK);
-        }else{
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Truck> Atualizar(@PathVariable long id, @RequestBody @Valid TruckDto truckDto) {
+        Truck listTruck = this.truckService.update(id, truckDto);
+        if (listTruck != null) {
+            return new ResponseEntity<>(listTruck, HttpStatus.OK);
+        } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?>Deletar(@PathVariable long id){
-        if(truckService.delete(id)){
-         return new ResponseEntity<>(HttpStatus.OK);
-        }else{
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<?> Deletar(@PathVariable long id) {
+        if (truckService.delete(id)) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<List<String>> getRoute(@PathVariable long id) {
+        List<String> rota = this.truckService.getRoute(id);
+        if (rota != null) {
+            return new ResponseEntity<>(rota, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }
