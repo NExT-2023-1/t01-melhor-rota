@@ -1,8 +1,10 @@
 # t01-melhor-rota
 
 <div align="center">
-<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/0ccc6680-c904-4db4-9647-0ddc7c2910a2" width="400px"> 
+<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/9d7ce0d2-d934-4170-bedd-f1f86a61eace" width="400px"> 
 </div>
+
+
 
 
 
@@ -27,6 +29,7 @@ RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambient
 
   Mentoria:
 - Danilo Alfredo
+
   
 Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 # UML
