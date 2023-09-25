@@ -59,7 +59,7 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 ![image](https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 
-##🌐 ENDPOINTS
+## 🌐 ENDPOINTS
 
 Após rodar a aplicação e com o banco de dados sincronizado na sua máquina, você precisará de uma ferramenta para fazer REST Requests. Todos os testes de funcionalidade do CRUD e do retorno da melhor rota foram feitos usando o Insomnia.
 
