@@ -44,7 +44,21 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 - API Client de sua preferência;
 - Spring Boot 3.1.3; 
 - MySQL;
-  
-  <strong>OBS:</strong> Para rodar a aplicação, será necessário ir em Aplication Properties e atualizar os dados de username e senha, considerando seu banco de dados local.
+<strong>OBS:</strong> Para rodar a aplicação, será necessário ir em Aplication Properties e atualizar os dados de username e senha, considerando seu banco de dados local.
+## Tecnologias Utilizadas
+
+
+![image](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)	
+![image](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![image](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![image](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+![image](https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white)
+![image](https://img.shields.io/badge/Linux-E34F26?style=for-the-badge&logo=linux&logoColor=black)
+![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+
+
 
 
