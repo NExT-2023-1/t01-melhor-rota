@@ -44,6 +44,7 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 - API Client de sua preferência;
 - Spring Boot 3.1.3; 
 - MySQL;
-<div align="right">
-<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/af11489e-c174-47ec-8a5b-259eb248e0f1" width="200px"> 
-</div>
+  
+  <strong>OBS:</strong> Para rodar a aplicação, será necessário ir em Aplication Properties e atualizar os dados de username e senha, considerando seu banco de dados local.
+
+
