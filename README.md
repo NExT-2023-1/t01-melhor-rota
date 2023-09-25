@@ -1,4 +1,4 @@
-# t01-melhor-rota
+<h1 align="center">Time Melhor Rota</h1>
 
 <div align="center">
 <img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/9d7ce0d2-d934-4170-bedd-f1f86a61eace" width="400px"> 
