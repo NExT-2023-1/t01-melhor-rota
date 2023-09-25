@@ -20,7 +20,7 @@ RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambient
 
 - A API é facilmente testada e utilizada com uma ferramenta de gerenciamento de APIs, como por exemplo a API Insomnia.
 
-# Criado por:
+## 🙋‍♂️ Criado por:
 - Igor Menezes
 - [Maria Eduarda Vasconcelos](https://github.com/eduardavasc)
 - [Matheus Lustosa](https://github.com/MatheusLustosa)
