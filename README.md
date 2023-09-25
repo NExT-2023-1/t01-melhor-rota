@@ -1,5 +1,9 @@
 # t01-melhor-rota
 
+<div align="center">
+<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/0ccc6680-c904-4db4-9647-0ddc7c2910a2" width="400px"> 
+</div>
+
 
 
 # ROUTE WISE - API
