@@ -37,7 +37,7 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 <img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/042db0fb-9587-4b7d-b4c0-545384d8e540" width="1000px"> 
 </div>
 
-## 🌐
+
 ## ⚙️ Como rodar na sua máquina?
 - OpenJDK 17.0.2+;
 - Maven 4.0+;
