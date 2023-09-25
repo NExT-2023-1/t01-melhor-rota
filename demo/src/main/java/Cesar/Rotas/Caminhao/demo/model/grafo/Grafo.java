@@ -4,10 +4,13 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
  
 public class Grafo {
     private final int V; 
@@ -15,7 +18,9 @@ public class Grafo {
     private static final List<String>vertices=new ArrayList<String>(Arrays.asList("Int1","Int2","Int3","Int4","Int5","Int6","Int7","Int8","Int9","Int10","Int11","Int12","Int13","Desc1","Desc2","Desc3","Esc1","Esc2","Esc3"));
     
     public Grafo(String filePath) throws IOException {
-        String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+        Resource resource = new ClassPathResource(filePath);
+        Path path = resource.getFile().toPath();
+        String content = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
         String[] linhas = content.split("\r\n");
         this.V = linhas.length-1;
         this.grafo = new int[V][V];
