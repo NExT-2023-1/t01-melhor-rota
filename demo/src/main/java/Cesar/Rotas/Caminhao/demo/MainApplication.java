@@ -1,12 +1,9 @@
 package Cesar.Rotas.Caminhao.demo;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import Cesar.Rotas.Caminhao.demo.model.grafo.Grafo;
-import Cesar.Rotas.Caminhao.demo.model.grafo.ResultadoDijkstra;
 
 @SpringBootApplication
 public class MainApplication {

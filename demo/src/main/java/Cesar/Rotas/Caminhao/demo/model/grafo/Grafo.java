@@ -25,8 +25,6 @@ public class Grafo {
         this.V = linhas.length-1;
         this.grafo = new int[V][V];
 
- 
-
         for (int i = 1; i < V+1; i++) {
             String[] valores = linhas[i].split(";");
             for (int j = 0; j < V; j++) 

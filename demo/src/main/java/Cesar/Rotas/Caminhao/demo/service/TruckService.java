@@ -20,32 +20,21 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class TruckService {
     private final TruckRepository truckRepositorio;
-
     public Truck create(TruckDto truckDTO) {
-        Truck truck = truckDTO.toEntity();
-        return this.truckRepositorio.save(truck);
-
     }
 
     public Truck getById(long id) {
         return this.truckRepositorio.findById(id).orElse(null);
     }
-
     public List<Truck> listAll() {
         List<Truck> truck = truckRepositorio.findAll();
-        return truck.stream()
-                .collect(Collectors.toList());
     }
 
     public Truck update(long id, @Valid TruckDto truckDTO) {
         Truck updatableTruck = this.truckRepositorio.findById(id).orElse(null);
         if (updatableTruck != null) {
-            updatableTruck.setLocation(truckDTO.getLocation());
             updatableTruck.setStatus(truckDTO.getStatus());
             return this.truckRepositorio.save(updatableTruck);
-        }
-        return null;
-    }
 
     public boolean delete(long id) {
         Truck truck = this.truckRepositorio.findById(id).orElse(null);
@@ -56,7 +45,6 @@ public class TruckService {
         return false;
 
     }
-
     // função para checagem do status do caminhão.
     // recebe como parÂmetro o ID do caminhão
     public boolean checkStatusTruck(long id) {
