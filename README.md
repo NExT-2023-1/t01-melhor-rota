@@ -1,8 +1,6 @@
 # t01-melhor-rota
 
-<div align="center">
-<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/af11489e-c174-47ec-8a5b-259eb248e0f1" width="200px"> 
-</div>
+
 
 # ROUTE WISE - API
 
@@ -37,5 +35,8 @@ Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho.
 - Maven 4.0+;
 - IDE de sua preferência;
 - API Client de sua preferência;
-- Spring Boot 3.1.3;
+- Spring Boot 3.1.3; 
 - MySQL;
+<div align="right">
+<img src="https://github.com/NExT-2023-1/t01-melhor-rota/assets/108696459/af11489e-c174-47ec-8a5b-259eb248e0f1" width="200px"> 
+</div>
