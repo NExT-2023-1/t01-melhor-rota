@@ -16,7 +16,7 @@ RouteWise é uma API desenvolvida para otimizar o transporte de carga em ambient
 
 - Os usuários podem cadastrar, buscar, atualizar e excluir informações dos caminhões, incluindo sua localização e status (cheio ou vazio).
 
-- De acorodo com as rotas pré-definidas, conforme a necessidade do cliente, facilitando a busca e o registro de rotas específicas para suas operações logísticas.
+- De acordo com as rotas pré-definidas, conforme a necessidade do cliente, facilitando a busca e o registro de rotas específicas para suas operações logísticas.
 
 - A API é facilmente testada e utilizada com uma ferramenta de gerenciamento de APIs, como por exemplo a API Insomnia.
 
